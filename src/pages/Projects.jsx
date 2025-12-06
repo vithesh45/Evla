@@ -9,14 +9,14 @@ export default function Projects() {
       title: "ELVA PMS",
       description: "Residential/Commercial Real Estate Plot Management Software.",
       about:"ELVA EMS is an Electrical Contract Management Software that streamlines electrical project planning and execution. It provides tools to monitor contracts, schedule work, manage resources, and ensure compliance with safety standards.  This software boosts efficiency and ensures smooth project operations for electrical contractors.",
-      image: "src/assets/OIP.jpg", // Replace with real project image
+      image: "/assets/OIP.jpg", // Replace with real project image
 
     },
     {
       title: "ELVA EMS",
       description: "Electrical Contract Management Software.",
       about: " ELVA PMS is a Residential and Commercial Real Estate Plot Management Software.It helps property developers and agents track plots, manage sales, and maintain records efficiently.The software is designed to reduce errors, simplify reporting, and improve customer management.",
-      image: "src/assets/OIP.jpg",
+      image: "/assets/OIP.jpg",
     },
   ];
 

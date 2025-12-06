@@ -6,7 +6,7 @@ return (
 <nav className="navbar">
 <div className="nav-logo">
   <img 
-    src="src/assets/Elva.svg"  
+    src="/assets/Elva.svg"  
     alt="Elva Tech" 
     className="logo-img" 
   />
