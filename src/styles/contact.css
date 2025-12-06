@@ -1,0 +1,289 @@
+.contact-container {
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  background: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #111;
+  opacity: 0;
+  animation: fadeInUp 1.5s forwards;
+}
+
+.team-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.team-member {
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  width: 220px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  animation: fadeInUp 1.5s forwards;
+}
+
+.team-member:nth-child(1) { animation-delay: 0.5s; }
+.team-member:nth-child(2) { animation-delay: 0.7s; }
+.team-member:nth-child(3) { animation-delay: 0.9s; }
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+}
+
+.team-member h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.7rem;
+  color: #222;
+}
+
+.team-member p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.form-title {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  color: #111;
+  opacity: 0;
+  animation: fadeInUp 2s forwards;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  gap: 1.5rem;
+  opacity: 0;
+  animation: fadeInUp 2s forwards;
+  animation-delay: 0.5s;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1.2rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 1rem;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #7aa0ff;
+  box-shadow: 0 0 10px rgba(122,160,255,0.2);
+}
+
+.contact-form button {
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #7aa0ff, #5c80ff);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(135deg, #5c80ff, #3f62ff);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.thankyou-msg {
+  font-size: 1.3rem;
+  color: #555;
+  margin-top: 2rem;
+  opacity: 0;
+  animation: fadeInUp 1.5s forwards;
+}
+
+/* --- Floating Shapes Animation (Optional for Premium Feel) --- */
+.contact-container::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(122,160,255,0.05);
+  border-radius: 50%;
+  top: -100px;
+  left: -100px;
+  animation: floatSlow 20s linear infinite alternate;
+}
+
+.contact-container::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: rgba(92,128,255,0.05);
+  border-radius: 50%;
+  bottom: -80px;
+  right: -80px;
+  animation: floatSlow 25s linear infinite alternate-reverse;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatSlow {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-40px) rotate(180deg); }
+  100% { transform: translateY(0) rotate(360deg); }
+}
+
+
+
+/* --- Large Tablets / Smaller Laptops (max 1024px) --- */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .team-contacts {
+    gap: 2.2rem;
+  }
+
+  .team-member {
+    width: 200px;
+    padding: 2rem 1.6rem;
+  }
+
+  .contact-form {
+    max-width: 520px;
+  }
+
+  .contact-container::before,
+  .contact-container::after {
+    transform: scale(0.85);
+    opacity: 0.4;
+  }
+}
+
+/* --- Tablets (max 768px) --- */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .team-contacts {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .team-member {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .contact-container::before,
+  .contact-container::after {
+    width: 300px;
+    height: 300px;
+    opacity: 0.2;
+  }
+}
+
+/* --- Phones (max 480px) --- */
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 3rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+  }
+
+  .form-title {
+    font-size: 1.8rem;
+  }
+
+  .team-member {
+    padding: 1.6rem 1.4rem;
+  }
+
+  .team-member h2 {
+    font-size: 1.4rem;
+  }
+
+  .team-member p {
+    font-size: 0.95rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  /* Smaller background circles */
+  .contact-container::before {
+    width: 200px;
+    height: 200px;
+    top: -30px;
+    left: -30px;
+  }
+
+  .contact-container::after {
+    width: 180px;
+    height: 180px;
+    bottom: -20px;
+    right: -20px;
+  }
+}
+
+/* --- Very Small Phones (max 360px) --- */
+@media (max-width: 360px) {
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .form-title {
+    font-size: 1.6rem;
+  }
+
+  .team-member {
+    padding: 1.3rem;
+  }
+
+  /* Shapes removed completely for clarity */
+  .contact-container::before,
+  .contact-container::after {
+    display: none;
+  }
+}
