@@ -1,41 +1,120 @@
-import React from "react";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 import "../styles/about.css";
 
 export default function About() {
-  return (
-    <div className="about-container">
-      <h2 className="section-title">About Elva Tech</h2>
-      <p className="section-subtitle">
-        Elva Tech is committed to delivering innovative digital solutions that
-        empower businesses to grow and succeed in a competitive landscape.
-        Our team of talented professionals combines creativity, technology, 
-        and strategy to transform ideas into reality.
-      </p>
 
+  const pageRef = useRef(null);
+
+  useEffect(() => {
+
+    const ctx = gsap.context(() => {
+
+      gsap.from(".about-hero", {
+        y: 80,
+        opacity: 0,
+        duration: 1
+      });
+
+      gsap.from(".about-story", {
+        y: 60,
+        opacity: 0,
+        duration: 1,
+        delay: 0.2
+      });
+
+      gsap.from(".about-image", {
+        scale: 0.9,
+        opacity: 0,
+        duration: 1
+      });
+
+      gsap.from(".about-item", {
+        y: 60,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.2
+      });
+
+    }, pageRef);
+
+    return () => ctx.revert();
+
+  }, []);
+
+  return (
+    <div ref={pageRef} className="about-container">
+
+      {/* Hero */}
+      <div className="about-hero">
+        <h1 className="section-title">About ELVA</h1>
+        <p className="section-subtitle">
+          ELVA is a technology-driven company focused on building business
+          systems and solving real-world problems through engineering.
+        </p>
+      </div>
+
+      {/* Story */}
+      <div className="about-story">
+
+        <div className="about-text">
+
+          <h2>Why ELVA Exists</h2>
+
+          <p>
+            ELVA was not started just to build software or generate revenue.
+            It was started to bring together people who enjoy solving
+            meaningful problems using technology.
+          </p>
+
+          <p>
+            We believe engineering can solve complex real-world challenges.
+            Our focus is on building systems that bring structure,
+            efficiency and transparency to businesses and industries.
+          </p>
+          <p>
+At ELVA, we believe that great engineering is not just about writing
+code. It is about understanding real problems, designing strong
+systems, and building solutions that can scale and evolve.
+</p>
+
+        </div>
+
+        <div className="about-image">
+          <img src="/assets/image-7.png" alt="ELVA team" />
+        </div>
+
+      </div>
+
+      {/* Values */}
       <div className="about-details">
+
         <div className="about-item">
           <h3>Our Mission</h3>
           <p>
-            To provide cutting-edge software solutions that simplify complex
-            business challenges while ensuring top-notch quality and user experience.
+            Build scalable technology platforms that help businesses
+            operate efficiently and grow sustainably.
           </p>
         </div>
+
         <div className="about-item">
           <h3>Our Vision</h3>
           <p>
-            To be recognized as a trusted partner in digital innovation, known
-            for creativity, reliability, and technological excellence.
+            Create an organization that continuously develops meaningful
+            solutions to real-world problems through technology.
           </p>
         </div>
+
         <div className="about-item">
           <h3>Our Values</h3>
           <p>
-            Integrity, Innovation, Collaboration, and Customer Success are at
-            the core of everything we do.
+            High energy, high intelligence and high integrity drive
+            everything we build at ELVA.
           </p>
         </div>
 
       </div>
+
     </div>
   );
 }

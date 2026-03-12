@@ -5,7 +5,16 @@
   box-sizing: border-box;
   font-family: "Urbanist", sans-serif;
 }
+.shape {
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+}
 
+body {
+  position: relative;
+  z-index: 1;
+}
 body {
   background: #ffffff;
   color: #111;
