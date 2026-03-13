@@ -53,17 +53,17 @@ export default function Projects() {
       image: "/assets/p3.png",
     },
     {
-      title: "ICTPI System",
-      description: "Industrial Contract Tracking Platform",
+      title: "AASTHI System",
+      description: "real estate intelligence  Platform",
       about:
-        "ICTPI is designed to track industrial contracts, vendor relationships, and project progress through structured workflows and centralized monitoring dashboards.",
+        "Aasthi is a real estate intelligence platform that helps buyers and investors make safe and profitable property decisions.It performs automated due diligence by checking title risks, legal records, and property history.It also provides investment intelligence like fair price benchmarks, rental yield, ROI projections, and locality insights.Aasthi’s mission is simple: “Know before you buy",
       image: "/assets/p4.png",
     },
     {
       title: "Direkt Platform",
-      description: "Direct Stakeholder Communication Infrastructure",
+      description: "Direct ",
       about:
-        "Direkt is built to create transparent communication channels between stakeholders by integrating digital workflows, reporting tools, and structured communication layers.",
+        "Direkt is an AI-powered autonomous trading platform that analyzes real-time market data to identify trading opportunities.It uses intelligent decision engines to determine entry, position sizing, and exit strategies for futures trading.The system continuously monitors markets and dynamically adjusts trades using AI-driven risk management.Direkt enables fully automated algorithmic trading, allowing strategies to be tested safely through paper trading before deploying with real capital.",
       image: "/assets/p5.png",
     },
     {

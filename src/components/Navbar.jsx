@@ -10,7 +10,7 @@ export default function Navbar() {
           alt="Elva Tech"
           className="logo-img"
         />
-        <span className="logo-text">Elva</span>
+        <span className="logo-text">ELVA</span>
       </div>
 
       <ul className="nav-links">

@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Urbanist", sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 .shape {
   position: fixed;
@@ -14,11 +14,16 @@
 body {
   position: relative;
   z-index: 1;
+
 }
 body {
   background: #ffffff;
   color: #111;
   scroll-behavior: smooth;
+}
+h1, h2, h3, h4, h5 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
 }
 
 /* NAVBAR */

@@ -31,7 +31,7 @@
 
 .hero-section {
   position: relative;
-  height: 100vh;
+  height: 93vh;
   width: 100%;
   overflow: hidden;
   background: #000;
@@ -43,7 +43,7 @@
 /* video background */
 
 .hero-video {
-  height: 200px;
+  height: 170px;
   border-radius: 12px;
 }
 

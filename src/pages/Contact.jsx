@@ -79,19 +79,50 @@ export default function Contact() {
         Reach out to our team.
       </p>
 
-      <div className="team-contacts">
+    <div className="team-contacts">
 
-        <div className="team-member">
-          <h2>Sai</h2>
-          <p>+91-96111 49957</p>
-        </div>
+  <div className="team-member">
 
-        <div className="team-member">
-          <h2>Gopinath</h2>
-          <p>+91-99723 04620</p>
-        </div>
+    <img
+      src="/assets/c1.jpeg"
+      alt="Sai"
+      style={{
+        width: "220px",
+        height: "220px",
+        objectFit: "contain",
+        display: "block",
+        margin: "0 auto 16px auto",
+        borderRadius: "22px"
+      }}
+    />
 
-      </div>
+    <h2>Sai</h2>
+    <p>+91-96111 49957</p>
+
+  </div>
+
+
+  <div className="team-member">
+
+    <img
+      src="/assets/c2.jpeg"
+      alt="Gopinath"
+      style={{
+        width: "220px",
+        height: "220px",
+        objectFit: "contain",
+        display: "block",
+        margin: "0 auto 16px auto",
+        borderRadius: "22px"
+      }}
+    />
+
+    <h2>Gopinath</h2>
+    <p>+91-99723 04620</p>
+
+  </div>
+
+</div>
 
       <h2 className="form-title">Send an Enquiry</h2>
 
